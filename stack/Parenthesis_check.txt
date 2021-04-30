@@ -1,0 +1,39 @@
+import java.util.*;
+public class MyClass{
+    static boolean isBalanced(String s){
+       
+        ArrayDeque<Character> stack=new ArrayDeque<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='(' || s.charAt(i)=='[' || s.charAt(i)=='{'){
+                stack.push(s.charAt(i));
+            }else if(s.charAt(i)==')' || s.charAt(i)==']' || s.charAt(i)=='}'){
+               //  char topelement=stack.peek();
+                if(stack.isEmpty()==false){
+                    return false;
+                }else if(isMatching(stack.peek(),s.charAt(i))==false){
+                         return false;
+                    }
+                 else{
+                         stack.pop();
+                }
+            }
+        }
+       return (stack.isEmpty()==true);
+         
+        
+    }
+   
+  static  boolean isMatching(char a,char b){
+        return( (a=='(' && b==')') || (a=='[' && b==']') || (a=='{' && b=='}'));
+    }
+     
+    
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+       
+        String str=sc.nextLine();
+        boolean ans=isBalanced(str);
+        System.out.println(" "+ans);
+        
+    }
+}
