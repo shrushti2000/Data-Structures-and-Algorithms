@@ -1,5 +1,6 @@
 # Data Structures and Algorithms
-This repository contains collection of  basic data structures and Algorithms implemented using java .
+This repository contains collection of  basic data structures and Algorithms implemented using java like arrays,queues,Linked Lists ,stacks.
+
 
 
 ![GitHub Logo](https://miro.medium.com/max/5442/1*KpDOKMFAgDWaGTQHL0r70g.png)
