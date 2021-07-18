@@ -1,0 +1,41 @@
+import java.util.*;
+public class MyClass{
+    
+   static  void  reverse(int arr[],int s,int end){
+       int low=s;
+       int high=end;
+      while(low<=high){
+          int temp=arr[low];
+           arr[low]=arr[high];
+           arr[high]=temp;
+           low++;
+           high--;
+      }
+   } 
+   
+   static void leftRotateOne(int[] arr){
+       int temp=arr[0];
+       for(int i=0;i<arr.length-1;i++){
+           arr[i]=arr[i+1];
+       }
+       arr[arr.length-1]=temp;
+   }
+    
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        int[] arr=new int[5];
+        System.out.println("Enter array elements");
+        
+          for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        int pos=2;
+        reverse(arr,0,pos-1);
+        reverse(arr,pos,arr.length-1);
+        reverse(arr,0,arr.length-1);
+     
+          for(int i=0;i<arr.length;i++){
+            System.out.print(" "+arr[i]);
+        }
+    }
+}

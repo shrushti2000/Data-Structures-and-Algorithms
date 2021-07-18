@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=7;
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+      int  lead=arr[n-1];
+        System.out.println(" "+lead);
+        for(int i=n-2;i>=0;i--){
+            if(lead<arr[i]){
+                lead=arr[i];
+                System.out.print(" "+lead);
+            }
+        }
+        
+    }
+}
