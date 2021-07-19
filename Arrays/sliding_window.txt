@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]) {
+     Scanner sc=new Scanner(System.in);
+     int[] arr=new int[6];
+     int n=6;
+     int k=3;
+     for(int i=0;i<n;i++){
+         arr[i]=sc.nextInt();
+     }
+     int max_sum=0;
+     for(int i=0;i<k;i++){
+         max_sum+=arr[i];
+     }
+      int curr_sum=max_sum;
+     for(int i=k;i<n;i++){
+        curr_sum+=(arr[i]-arr[i-k]);
+         max_sum=Math.max(curr_sum,max_sum);
+     }
+     System.out.println(" "+max_sum);
+    }
+}
