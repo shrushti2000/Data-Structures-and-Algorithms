@@ -1,0 +1,18 @@
+public class MyClass {
+    public static void main(String args[]) {
+     String str="ABCDEFGH";
+     String s="BDEGH";
+     int i=0;
+     for(int j=0;j<str.length() && i<s.length();j++){
+         if(str.charAt(j)==s.charAt(i)){
+             i++;
+         }
+     }
+     if(i==s.length()){
+         System.out.println("Yes");
+     }else{
+         System.out.println("No"); 
+     }
+     
+    }
+} 
